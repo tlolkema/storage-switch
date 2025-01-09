@@ -1,0 +1,226 @@
+:root {
+  --neon-blue: #0ff;
+  --neon-pink: #ff36ab;
+  --dark-bg: #0a0b1c;
+  --darker-bg: #060714;
+  --panel-bg: #141832;
+  --text-color: #e0e0ff;
+  --neon-glow: 0 0 10px;
+}
+
+body {
+  width: 450px;
+  padding: 16px;
+  font-family: "Orbitron", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 418px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--neon-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+input {
+  padding: 8px 12px;
+  border: 1px solid var(--neon-blue);
+  border-radius: 4px;
+  background-color: var(--darker-bg);
+  color: var(--text-color);
+  font-family: "Share Tech Mono", monospace;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+button {
+  padding: 8px;
+  background-color: var(--panel-bg);
+  color: var(--neon-blue);
+  border: 1px solid var(--neon-blue);
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Share Tech Mono", monospace;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--neon-blue);
+  color: var(--darker-bg);
+  box-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.entry-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--neon-blue);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.entry-item label {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 8px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.entry-item input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neon-blue);
+  border-radius: 4px;
+  background-color: var(--darker-bg);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.entry-item input[type="checkbox"]:checked {
+  background-color: var(--neon-blue);
+}
+
+.entry-item input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 6px;
+  height: 11px;
+  border: solid var(--darker-bg);
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.entry-item input[type="checkbox"]:hover {
+  box-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-pink);
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 60px;
+  box-shadow: var(--neon-glow) var(--neon-pink);
+  text-shadow: 0 0 5px var(--neon-pink);
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: var(--neon-pink);
+  color: var(--darker-bg);
+  box-shadow: var(--neon-glow) var(--neon-pink);
+  text-shadow: none;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--neon-blue);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--neon-blue);
+}
+
+.tab-btn:hover {
+  background-color: var(--neon-blue);
+  color: var(--darker-bg);
+  box-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+.tab-btn.active {
+  background-color: var(--neon-blue);
+  color: var(--darker-bg);
+  box-shadow: var(--neon-glow) var(--neon-blue);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.add-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputs-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.add-form-container button {
+  width: 100%;
+}
+
+button.remove-btn {
+  background-color: var(--panel-bg);
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-pink);
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 60px;
+  box-shadow: var(--neon-glow) var(--neon-pink);
+  text-shadow: 0 0 5px var(--neon-pink);
+  transition: all 0.3s ease;
+}
+
+button.remove-btn:hover {
+  background-color: var(--neon-pink);
+  color: var(--darker-bg);
+  box-shadow: var(--neon-glow) var(--neon-pink);
+  text-shadow: none;
+}

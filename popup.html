@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StorageSwitch</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>StorageSwitch</h1>
+
+      <div id="noItemsPanel" class="tab-panel active">
+        <form id="addEntryForm" class="add-form-container">
+          <div class="inputs-row">
+            <input type="text" id="keyInput" placeholder="Key" required />
+            <input type="text" id="valueInput" placeholder="Value" required />
+          </div>
+          <button type="submit">Add Entry</button>
+        </form>
+      </div>
+
+      <div id="withItemsPanel" class="tab-panel">
+        <div class="tabs">
+          <button id="itemsTab" class="tab-btn">Current Items</button>
+          <button id="addTab" class="tab-btn">Add New</button>
+        </div>
+
+        <div id="itemsPanel" class="tab-panel">
+          <div id="entriesList" class="entries-list">
+            <!-- Entries will be added here dynamically -->
+          </div>
+        </div>
+
+        <div id="addPanel" class="tab-panel">
+          <form id="addEntryForm2" class="add-form-container">
+            <div class="inputs-row">
+              <input type="text" id="keyInput2" placeholder="Key" required />
+              <input
+                type="text"
+                id="valueInput2"
+                placeholder="Value"
+                required
+              />
+            </div>
+            <button type="submit">Add Entry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
