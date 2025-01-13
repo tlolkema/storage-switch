@@ -1,6 +1,6 @@
 # StorageSwitch
 
-![StorageSwitch](./img/screenshot1.png)
+![StorageSwitch](./img/readme.png)
 
 A Chrome extension that helps you manage localStorage items with a simple interface. Easily switch localStorage entries on and off across your browsing sessions.
 
