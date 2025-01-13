@@ -1,8 +1,6 @@
 let entries = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const noItemsPanel = document.getElementById("noItemsPanel");
-  const withItemsPanel = document.getElementById("withItemsPanel");
   const itemsTab = document.getElementById("itemsTab");
   const addTab = document.getElementById("addTab");
   const itemsPanel = document.getElementById("itemsPanel");
@@ -45,9 +43,17 @@ function handleAddEntry(e) {
   const keyInput = form.querySelector('input[type="text"]');
   const valueInput = form.querySelector('input[type="text"]:last-of-type');
 
+  const key = keyInput.value.trim();
+  const value = valueInput.value.trim();
+
+  // Validate that key is not empty after trimming
+  if (!key) {
+    return;
+  }
+
   const newEntry = {
-    key: keyInput.value,
-    value: valueInput.value,
+    key,
+    value,
     enabled: true,
   };
 
